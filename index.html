@@ -50,11 +50,11 @@
                 alt="Hamburguer 1"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">X-Salada Especial</p>
                     <p class="text-sm">Hambúrguer, mussarela, tomate, presunto, alface, ovo, milho e batata palha</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 19,00</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
@@ -73,11 +73,11 @@
                 alt="Hamburguer 2"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">X-Bacon especial</p>
                     <p class="text-sm">Hambúrguer, mussarela, tomate, bacon, presunto, alface, ovo, milho e batata palha</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 21,00</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
@@ -95,11 +95,11 @@
                 alt="Hamburguer 3"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">X-Salada Simples</p>
                     <p class="text-sm">Hambúrguer, mussarela, tomate, presunto, alface, milho e batata palha</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 18,00</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
@@ -117,11 +117,11 @@
                 alt="Hamburguer 4"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">X-Frango especial</p>
                     <p class="text-sm">Hambúrguer de frango, mussarela, tomate, presunto, alface, ovo, milho e batata palha</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 22,00</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
@@ -147,13 +147,13 @@
             <div class="flex gap-2 bg-gray-100 p-2 rounded-md w-full">
                 <img src="assets/refri-1.png" 
                 alt="Bebida 1"
-                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-360 duration-300"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">Coca-Cola lata</p>
                     <p class="text-sm">Refrigerante, 350ml</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 5,00</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
@@ -171,15 +171,15 @@
                 alt="Bebida 2"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
                 />
-                <div class="w-full">
+                <div class="flex-1 flex flex-col">
                     <p class="font-bold">Guaraná Antártica lata</p>
                     <p class="text-sm">Refrigerante, 350ml</p>
 
-                    <div class="flex items-center gap-4 justify-between mt-3">
+                    <div class="flex items-center gap-4 justify-between mt-auto pt-3">
                         <p class="font-bold text-lg">R$ 4,50</p>
                         <button 
                             class="bg-blue-950 px-5 rounded add-to-cart-btn"
-                            data-name="Guaraná Antártica lata"
+                            data-name="Guarana Antartica lata"
                             data-price="4.50"
                         >
                             <i class="fa fa-cart-plus text-lg text-white"></i>
@@ -192,12 +192,65 @@
 
     </div>
     <!-- END MENU -->
+
+    <div 
+        id="cart-modal" 
+        class="bg-black/70 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center"
+    >
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex flex-col justify-between mb-2"></div>
+            <p class="font-bold">Total: R$<span id="cart-total">0,00</span></p>
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input 
+                type="text"
+                placeholder="Digite seu endereço completo..."
+                id="address"
+                class="w-full border-2 p-1 rounded-md border-gray-400"
+
+            />
+            <p class="text-red-600 hidden" id="address-warn">Digite seu endereço completo!</p>
+            
+            <p class="font-bold mt-4">Número de telefone:</p>
+            <input 
+                type="text"
+                placeholder="Digite seu número aqui..."
+                id="number"
+                class="w-full border-2 p-1 rounded-md border-gray-400"
+
+            />
+            <p class="text-red-600 hidden" id="number-warn">Número de telefone inválido!</p>
+            
+
+            <div class="flex items-center justify-between mt-4">
+                <button 
+                    id="close-modal-btn" 
+                    class="bg-red-500 text-white font-bold rounded py-1 px-4">
+                    Fechar
+                </button>
+                <button 
+                    id="checkout-btn" 
+                    class="bg-green-500 text-white font-bold rounded py-1 px-4">
+                        Finalizar pedido
+                </button>
+            </div>
+
+        </div>
+
+    </div>
      
 
-    <footer> 
-
-        
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center"> 
+        <button 
+            class="flex items-center gap-2 text-white font-bold"
+            id="cart-btn"
+            >
+            (<span id="cart-count">0</span>)
+            Verifique seu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
