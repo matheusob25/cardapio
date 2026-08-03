@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Hamburgueria</title>
+    <link href="./styles/output.css" rel="stylesheet">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/00c2d6fac5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12"> 
+    <header>
+        <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed z-20 w-full top-0">
+            
+            <div class="flex flex-wrap  items-center">
+                <div class="flex shrink md:w-1/3 justify-center md:justify-start text-white"> 
+                    <a href="#" aria-label="Home">
+                        <span class="text-xl pl-2"> <i class="fa-solid fa-burger" style="color: rgb(237, 218, 3);"></i></span>
+                    </a>
+                </div>
+
+                <div class="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
+                    <ul class=" bg-amber-600 list-none p-0 flex justify-between flex-1 md:flex-none items-center">
+                        <li class="flex-1 md:flex-none md:mr-3">
+                            <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
+                        </li>
+                        <li class="flex-1 md:flex-none md:mr-3">
+                            <a class="inline-block py-2 px-4 text-gray-400 hover:text-gray-200 hover:underline no-underline" href="#">Link</a>
+                        </li>
+
+                        <li class="flex-1 md:flex-none md:mr-3">
+                            <div class="relative inline-block">
+                                    <button onclick="toggleDD('myDropdown')" class="drop-button text-white py-2 px-2"> <span class="pr-2"><i class="em em-robot_face"></i></span> Hi, User <svg class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg></button>
+                                    <div id="myDropdown" class="dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible">
+                                        <input type="text" class="drop-search p-2 text-gray-600" placeholder="Search.." id="myInput" onkeyup="filterDD('myDropdown','myInput')">
+                                        <a href="#" class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fa fa-user fa-fw"></i> Profile</a>
+                                        <a href="#" class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fa fa-cog fa-fw"></i> Settings</a>
+                                        <div class="border border-gray-800"></div>
+                                        <a href="#" class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a>
+                                    </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            
+
+        </nav>
+    </header>
+
+
+
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    <div class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatem molestias quod temporibus officiis quas unde deserunt vitae fuga sint error sunt exercitationem, quibusdam corporis expedita tempore ipsa molestiae neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis voluptas dolores, expedita error repellat exercitationem velit officiis. Ut maiores minus laboriosam sapiente hic aspernatur molestiae porro accusantium itaque nisi.</div>
+    
+
+
+    <!-- <div 
+        id="overlay"
+        class="fixed inset bg-black/50 hidden z-40 md:hidden"
+    
+    ></div>
+
+    <aside
+        id="sidebar"
+        class="fixed top-0 left-0 h-full w-64 bg-blue-950 text-white
+               transform -translate-x-full
+               transition-transform duration-300
+               md:translate-x-0 md:static md:flex md:flex-col"
+        >
+        <div class="p-6 text-2xl font-bold border-b border-blue-800">
+            🍔 Hamburgueria
+        </div>
+
+        <nav class="flex flex-col mt-6">
+
+            <a href="#" class="px-6 py-3 hover:bg-blue-900">
+                Dashboard
+            </a>
+
+            <a href="#" class="px-6 py-3 hover:bg-blue-900">
+                Produtos
+            </a>
+
+            <a href="#" class="px-6 py-3 hover:bg-blue-900">
+                Pedidos
+            </a>
+
+            <a href="#" class="px-6 py-3 hover:bg-blue-900">
+                Configurações
+            </a>
+
+        </nav>
+
+
+    </aside>
+
+    <div class="md:ml-64 min-h-screen">
+        <header class="bg-white shadow p-4 flex items-center justify-between">
+            <button
+                id="openMenu"
+                class="text-2xl md:hidden"
+                
+            > ☰</button>
+            <h1 class="font-bold text-xl">Painel Administrativo</h1>
+
+            <span class="text-lg">Matheus</span>
+        </header>
+
+        <main class="p-6">
+            <h2 class="text-2xl font-bold mb-6">
+                Produtos
+            </h2>
+        </main>
+    </div> -->
+
+
+    <!-- <header class="bg-white  border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+
+         
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-950 text-white w-10 h-10 rounded-lg flex items-center justify-center">
+                    🍔
+                </div>
+
+                <div>
+                    <h1 class="font-bold text-xl text-gray-800">
+                        BurgerAdmin
+                    </h1>
+                    <p class="text-xs text-gray-500">
+                        Painel Administrativo
+                    </p>
+                </div>
+            </div>
+
+           
+            <nav class="hidden md:flex items-center gap-2">
+
+                <a href="#"
+                    class="px-4 py-2 rounded-lg bg-blue-950 text-white font-medium">
+                    Produtos
+                </a>
+
+                <a href="#"
+                    class="px-4 py-2 rounded-lg hover:bg-gray-100 transition">
+                    Pedidos
+                </a>
+
+                <a href="#"
+                    class="px-4 py-2 rounded-lg hover:bg-gray-100 transition">
+                    Clientes
+                </a>
+
+                <a href="#"
+                    class="px-4 py-2 rounded-lg hover:bg-gray-100 transition">
+                    Configurações
+                </a>
+
+            </nav>
+
+            <div class="flex items-center gap-3">
+
+                <span class="text-gray-700 font-medium hidden sm:block">
+                    Matheus
+                </span>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</header> -->
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>
