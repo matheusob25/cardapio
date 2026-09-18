@@ -1,6 +1,6 @@
 export default function Header(){
     return(
-           <header className="bg-[url('/assets/bg.png')]">
+           <header className="bg-[url('/assets/bg.png')] w-full h-[420px] bg-cover bg-center ">
             <div className="w-full h-full flex flex-col justify-center items-center">
 
                 <img
